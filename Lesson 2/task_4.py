@@ -1,7 +1,9 @@
 def range_realization(n):
     range_list = []
-    for i in range(n):
+    i = 0
+    while i < n:
         range_list.append(i)
+        i += 1
     return range_list
 
 n = 4
