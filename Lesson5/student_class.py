@@ -4,13 +4,13 @@ class Student(object):
         self.name = name
         self.info_dict = info_dict
         self.sum = 0
-        self.points = [0] * self.info_dict.get('lab_num') #список баллов за каждую лабу
-        self.attempts = [0] * self.info_dict.get('lab_num') #список попыток за каждую лабу соответственно
+        self.points = [0] * self.info_dict.get('lab_num')  # список баллов за каждую лабу
+        self.attempts = [0] * self.info_dict.get('lab_num')  # список попыток за каждую лабу соответственно
 
     def make_lab(self, m, n=0):
         if 0 <= n < self.info_dict.get('lab_num') - 1:
             if 0 < m <= self.info_dict.get('lab_max'):
-                if self.attempts[n] < 3: #ограничение в 3 попытки
+                if self.attempts[n] < 3:  # ограничение в 3 попытки
                     self.points[n] = m
                     self.attempts[n] += 1
         return self
@@ -40,12 +40,12 @@ def main():
     vlad.make_lab(6)
     vlad.make_lab(6)
     vlad.make_lab(6)
-    vlad.make_lab(6) #Четвертая попытка уже не учитывается
+    vlad.make_lab(6)  # Четвертая попытка уже не учитывается
     vlad.make_lab(6, 8)
     vlad.make_lab(7, 5)
     vlad.make_exam(30)
-    rezult = vlad.is_sertified()
-    return rezult
+    rez = vlad.is_sertified()
+    return rez
 
 
 rezult = main()

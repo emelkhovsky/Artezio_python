@@ -39,6 +39,7 @@ def main(s1, s2):
     print(abs(c))
     print(abs(d))
 
+
 ss1 = '2 1'
 ss2 = '5 6'
 main(ss1, ss2)
